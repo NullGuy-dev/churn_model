@@ -1,4 +1,4 @@
-# importing
+# importing libs
 from sklearn.preprocessing import PowerTransformer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -37,4 +37,4 @@ model.fit(X_train, y_train) # training
 # testing with the data for testing
 res = model.predict(X_test)
 acc = accuracy_score(y_test, res) # using accuracy metric
-print(f"Model's accuracy: {acc}") # accuracy - 86.3%
+print(f"Model's accuracy: {acc}") # accuracy - 86.4%
