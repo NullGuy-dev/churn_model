@@ -10,9 +10,9 @@ import pandas as pd
 df = pd.read_csv("/content/drive/MyDrive/Churn_Modelling.csv")
 data = df.drop(["RowNumber", "CustomerId", "Surname"], axis=1)
 
-# function for converting gender to the binary(0 or 1)
+# function for converting gender to the -1 or 1
 def gender2bin(sex):
-  return 1 if "Female" else 0
+  return -1 if "Female" else 1
 
 # function for converting user's geography to the int (0 - Spain, 1 - France or 2 - Germany) 
 def geo2int(geo):
@@ -37,4 +37,4 @@ model.fit(X_train, y_train) # training
 # testing with the data for testing
 res = model.predict(X_test)
 acc = accuracy_score(y_test, res) # using accuracy metric
-print(f"Model's accuracy: {acc}") # accuracy - 86.4%
+print(f"Model's accuracy: {acc}") # accuracy - 86.95%
