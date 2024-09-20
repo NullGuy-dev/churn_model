@@ -1,2 +1,2 @@
 # churn_model
-Churn Model for users
+Churn Model for worker's behavior prediction
